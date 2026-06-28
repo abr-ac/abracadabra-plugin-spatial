@@ -1,0 +1,45 @@
+{
+  "manifestVersion": 1,
+  "id": "spatial",
+  "name": "Spatial",
+  "version": "0.1.0",
+  "author": {
+    "github": "abr-ac",
+    "name": "Abracadabra"
+  },
+  "license": "MIT",
+  "description": "Pure Three.js 3D scene page type. Every object, light, and group is a document; models load from GLB/GLTF files (with nested dependencies) attached to documents, with real-time multi-user awareness.",
+  "repository": "github:abr-ac/abracadabra-plugin-spatial",
+  "minAbracadabraVersion": "^2.29.0",
+  "entry": "dist/plugin.js",
+  "integrity": "sha256-04d4c52bfdeef94b23e8143849c00960ce87555e1061dd2192cb40b8f6543543",
+  "pricing": "free",
+  "categories": [
+    "3d",
+    "design",
+    "collaboration"
+  ],
+  "capabilities": {
+    "required": [
+      "page-type:spatial",
+      "command-palette",
+      "doc-read",
+      "doc-write",
+      "awareness",
+      "network"
+    ]
+  },
+  "contributes": {
+    "pageTypes": [
+      "spatial"
+    ],
+    "awarenessFields": [
+      "spatial:camera",
+      "spatial:selected",
+      "spatial:pointer"
+    ],
+    "commands": [
+      "spatial:new-scene"
+    ]
+  }
+}

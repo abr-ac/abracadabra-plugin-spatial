@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "jsx": "preserve",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": false,
+    "baseUrl": ".",
+    "paths": {
+      "@abraca/plugin": ["../abracadabra-ts/packages/plugin/src/index.ts"]
+    }
+  },
+  "//note": "paths override is DEV-ONLY: resolves the contract to local source until the TreeApi/FileApi contract addition (@abraca/plugin >= 2.30) is published; drop after `wand publish --ts`.",
+  "include": ["src/**/*"],
+  "exclude": ["dist", "node_modules"]
+}

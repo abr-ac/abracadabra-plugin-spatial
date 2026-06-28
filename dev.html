@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spatial — dev harness</title>
+    <style>
+      /* Approximate cou-sh's Nuxt UI v4 token palette (zinc neutral + mist/indigo
+         primary, dark) so the renderer's --ui-* reskin renders faithfully here. */
+      :root {
+        --ui-radius: 0.375rem;
+        --font-code: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+        --ui-bg: #09090b;
+        --ui-bg-muted: #18181b;
+        --ui-bg-elevated: #18181b;
+        --ui-bg-accented: #27272a;
+        --ui-text: #d4d4d8;
+        --ui-text-muted: #a1a1aa;
+        --ui-text-dimmed: #71717a;
+        --ui-text-toned: #d4d4d8;
+        --ui-text-highlighted: #fafafa;
+        --ui-border: #27272a;
+        --ui-primary: #818cf8;
+        --ui-color-primary-500: #6366f1;
+        --ui-color-error-500: #ef4444;
+        --ui-color-success-500: #22c55e;
+        --ui-color-warning-500: #f59e0b;
+        --ui-color-info-500: #3b82f6;
+      }
+      html, body, #app { height: 100%; margin: 0; }
+      body { background: var(--ui-bg); color: var(--ui-text); font-family: ui-sans-serif, system-ui, sans-serif; }
+      #app { width: 100vw; height: 100vh; }
+      /* A tiny dev overlay so it's obvious which build is running. */
+      #devtag {
+        position: fixed; bottom: 6px; left: 50%; transform: translateX(-50%);
+        font: 10px ui-monospace, monospace; color: var(--ui-text-dimmed); z-index: 99; pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="devtag">spatial dev harness — drop a .glb/.gltf, or use the toolbar</div>
+    <script type="module" src="/dev/harness.ts"></script>
+  </body>
+</html>
